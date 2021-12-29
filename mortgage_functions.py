@@ -27,6 +27,6 @@ def amortization_schedule(principal, monthly_payment, rate):
 		interest = principal * monthly_rate
 		principal_paying = min(monthly_payment - interest, principal)
 		principal -= principal_paying
-		amortization[month_into_term] = [round(interest, 2), round(principal_paying, 2), round(principal, 2)]
+		amortization[month_into_term] = [monthly_payment, round(interest, 2), round(principal_paying, 2), round(principal, 2)]
 	return amortization
 		
